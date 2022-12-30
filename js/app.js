@@ -4,11 +4,12 @@ $(document).ready(function () {
     $(".area-enc").click(function (e) { 
         e.preventDefault();
         $(this).select();
+        $("#content").fadeOut();
     });
-
+    
     //controlar solo letras sin caracteres especiales ni acentos, incluir letra ñ=241, espacio y borrar.
     $(".area-enc").keypress(function (tecla) { 
-        $("#content").fadeOut();
+        
         tecla = (document.all)? tecla.keyCode : tecla.which;
         //console.log(tecla);
         if(tecla == 8 || tecla==32 || tecla==241){
