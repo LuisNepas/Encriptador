@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+<body class="bodyEnc">
+    <header>
+        <img class="logo" src="imagenes/Vector.svg" alt="Logo Alura">
+    </header>
+    <main>
+        <section class="caja-enc">
+            <div class="row">
+                <div class="col-7">
+                    <h2>Encriptador</h2>
+                    <textarea type="text" class="area-enc" cols="50" rows="15" placeholder="Ingrese el texto aqui"></textarea>
+                    <div class="error">
+                        
+                        <p><img class="img-error" src="imagenes/error.svg">Solo letras minúsculas y sin acentos.</p>
+                    </div>
+                    
+                    <div class="botones-enc">
+                        <button class="btn-enc" onclick="encriptar()">Encriptar</button>
+                        <button class="btn-denc" onclick="desencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+                <div class="col resultado">
+                    <h2>Resultado</h2>
+                    
+                    <div id="no-result">
+                        <img class="img-res" src="imagenes/Muñeco.svg" alt="resultado">
+                        <p class="men1">Ningun mensaje fue encontrado</p>
+                        <p class="men2">Ingrese el texto que desees encriptar o desencriptar</p>
+                    </div>
+                    <div id="yes-result">
+                        <textarea readonly id="resultado-enc" cols="40">Este es el resultado</textarea>
+                        <button class="btn-copy" onclick="copiarAlPortapapeles('resultado-enc')">Copiar</button>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+    </main>
+</body>
+</html>
