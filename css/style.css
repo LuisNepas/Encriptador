@@ -47,6 +47,10 @@
     border: 1px solid #0A3871;
     margin: 10px;
 }
+.btn-enc:hover ,.btn-denc:hover,.btn-copy:hover{
+    transform: scale(1.05);
+    border: 1px solid aqua;
+}
 .btn-denc{
     width: 328px;
     height: 67px;
