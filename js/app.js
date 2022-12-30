@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    
     $("#yes-result").hide();
     $(".area-enc").click(function (e) { 
         e.preventDefault();
@@ -7,6 +8,7 @@ $(document).ready(function () {
 
     //controlar solo letras sin caracteres especiales ni acentos, incluir letra ñ=241, espacio y borrar.
     $(".area-enc").keypress(function (tecla) { 
+        $("#content").fadeOut();
         tecla = (document.all)? tecla.keyCode : tecla.which;
         //console.log(tecla);
         if(tecla == 8 || tecla==32 || tecla==241){
@@ -67,5 +69,5 @@ function copiarAlPortapapeles(id_elemento) {
     aux.select(); 
     document.execCommand("copy");
     document.body.removeChild(aux);
-    
+    $("#content").fadeIn();
   }
